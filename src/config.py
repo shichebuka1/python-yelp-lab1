@@ -1,6 +1,6 @@
 from pathlib import Path
 
-# Определяем путь к корневой папке нашего проекта (D:\Yelp_Lab1)
+# Определяем путь к корневой папке нашего проекта (D:\Labs\Yelp_Lab1)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Прописываем пути к трём папкам с данными согласно методичке:
@@ -28,3 +28,25 @@ REVIEW_SAMPLE_PATH = INTERIM_DIR / "review_sample_200k.jsonl"
 
 # Путь к финальному очищенному файлу, который мы получим на Шаге 12
 CLEAN_DATA_PATH = PROCESSED_DIR / "clean.parquet"
+
+# Оптимальная схема типов данных для экономии памяти (Шаг 10 и Шаг 12)
+OPTIMAL_SCHEMA = {
+    "review_id": "string",
+    "user_id": "string",
+    "business_id": "string",
+    "stars": "int8",
+    "useful": "int16",
+    "funny": "int16",
+    "cool": "int16",
+    "text": "string",
+    "business_name": "string",
+    "city": "category",
+    "state": "category",
+    "postal_code": "string",
+    "latitude": "float32",
+    "longitude": "float32",
+    "business_stars": "float32",
+    "review_count": "int32",
+    "is_open": "boolean",
+    "main_category": "category",
+}
