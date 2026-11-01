@@ -1,0 +1,19 @@
+[project]
+name = "yelp-data-lab1"
+version = "0.1.0"
+description = "Лабораторная работа № 1 по обработке и очистке данных"
+readme = "README.md"
+requires-python = "==3.12.14"
+dependencies = [
+    "pandas>=2.2",
+    "polars>=1.0",
+    "pyarrow>=17.0",
+    "sqlalchemy>=2.0",
+    "psycopg2-binary>=2.9",
+    "python-dotenv>=1.0",
+    "matplotlib>=3.9"
+]
+
+[tool.poetry.group.dev.dependencies]
+ruff = ">=0.6"
+jupyter = ">=1.0"
